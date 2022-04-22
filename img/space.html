@@ -1,0 +1,11 @@
+<!DOCTYPE html><html><head><link rel="icon" href="https://www.gstatic.com/earth/00-favicon.ico"></head><body style="background-color:#000"><script>/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+'use strict';var b="function"==typeof Object.create?Object.create:function(a){var c=function(){};c.prototype=a;return new c},d;if("function"==typeof Object.setPrototypeOf)d=Object.setPrototypeOf;else{var e;a:{var f={a:!0},g={};try{g.__proto__=f;e=g.a;break a}catch(a){}e=!1}d=e?function(a,c){a.__proto__=c;if(a.__proto__!==c)throw new TypeError(a+" is not extensible");return a}:null}var h=d;/*
+
+ SPDX-License-Identifier: Apache-2.0
+*/
+var k={};var m=function(a,c){this.g=c===l?a:""};m.prototype.toString=function(){return this.g.toString()};var l={};var n=function(){},p=function(a){this.g=a};p.prototype=b(n.prototype);p.prototype.constructor=p;if(h)h(p,n);else for(var q in n)if("prototype"!=q)if(Object.defineProperties){var r=Object.getOwnPropertyDescriptor(n,q);r&&Object.defineProperty(p,q,r)}else p[q]=n[q];p.prototype.toString=function(){return this.g};var t=new p("about:invalid#zTSz",k);function u(a){if(a instanceof n)if(a instanceof p)a=a.g;else throw Error("");else a=a instanceof m&&a.constructor===m?a.g:"type_error:SafeUrl";return a};var v=function(a){this.h=a};function w(a){return new v(function(c){return c.substr(0,a.length+1).toLowerCase()===a+":"})}var x=[w("data"),w("http"),w("https"),w("mailto"),w("ftp"),new v(function(a){return/^[^:]*([/?#]|$)/.test(a)})];var y=window.location,z=(RegExp("^[\\w\\/-]*(current|9\\.159\\.0\\.0)\\/(index[\\w-]*\\.html)?").test(window.location.pathname)?"app_min.html":"9.159.0.0/app_min.html")+window.location.search+window.location.hash,A;A=void 0===A?x:A;var B;a:{var C=A;C=void 0===C?x:C;for(var D=0;D<C.length;++D){var E=C[D];if(E instanceof v&&E.h(z)){B=new p(z,k);break a}}B=void 0}y.replace(u(B||t));
+</script></body></html>
