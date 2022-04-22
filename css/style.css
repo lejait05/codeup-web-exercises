@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title></title>
-                      <style>
-                      .fancy-header {
-                          color: purple;
-                          text-decoration:;
-                      }
-</style>
-  </head>
-    <body>
-    <h1 class="fancy-header"></h1>
-</body>
-  </html>
+.fancy-header {
+    color: greenyellow;
+    text-decoration:;
+}
+h1{
+    text-align: center;
+}
+h2 {
+    color: greenyellow;
+    text-decoration: underline;
+}
+body {
+    background-color: blue;
+}
