@@ -54,10 +54,16 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(random) {
-    if(random === 2){return("boolean");}
 
-}console.log();
+//function isTwo(random) {
+  //  if (random === 2)
+    //{
+      //  return (true);
+//    }else
+  //  {
+    //    return (false);
+   // }
+//console.log();}
 
 /**
  * TODO:
@@ -70,6 +76,16 @@ function isTwo(random) {
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+var tipPercent= Number();
+var billTotal= Number();
+var tipAmount= (tipPercent) * (billTotal);
+function calculateTip(tipPercent,billTotal){
+     return(tipAmount);
+}
+
+calculateTip(0.20,20)
+
+console.log(tipAmount);
 
 /**
  * TODO:
@@ -92,3 +108,6 @@ function isTwo(random) {
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+function applyDiscount(){
+
+}
