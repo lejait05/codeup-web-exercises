@@ -9,79 +9,8 @@
 </head>
 <body>
 <h1><img src="img/CodeupFullColorChevronYT.jpg"  width="50" height="50">   Codeup</h1>
-<h2><div id="Repositories" class="tabcontent">
-    <h5>Repositories</h5>
-    <p>different repositories will be here.</p>
-</div>
-
-    <div id="People" class="tabcontent">
-        <h5>People</h5>
-        <p>Codeup's Dev team</p>
-    </div>
-
-    <div id="Teams" class="tabcontent">
-        <h5>Teams</h5>
-        <p>everyones teams will be here</p>
-    </div>
-
-    <div id="Projects" class="tabcontent">
-        <h5>Projects</h5>
-        <p>projects in the works and completed will be here.</p>
-    </div>
-
-    <div id="settings" class="tabcontent">
-        <h5>Settings</h5>
-        <p>settings to adjust the page will be here.</p>
-    </div>
 
 
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <style>
-        body {
-            background: rgb(140, 214, 30);
-        }
-
-        [data-tab-info] {
-            display: none;
-        }
-
-        .active[data-tab-info] {
-            display: block;
-        }
-
-        .tab-content {
-            font-size: 30px;
-            font-family: sans-serif;
-            font-weight: bold;
-            color: rgb(82, 75, 75);
-        }
-
-        .tabs {
-            font-size: 40px;
-            color: rgb(255, 255, 255);
-            display: flex;
-            margin: 0;
-        }
-
-        .tabs span {
-            background: rgb(28, 145, 38);
-            padding: 10px;
-            border: 1px solid rgb(255, 255, 255);
-        }
-
-        .tabs span:hover {
-            background: rgb(29, 185, 112);
-            cursor: pointer;
-            color: black;
-        }
-    </style>
-</head>
-
-<body>
 <div class="tabs">
     <span data-tab-value="#Repositories">Repositories</span>
     <span data-tab-value="#People">People</span>
@@ -92,35 +21,34 @@
 
 <div class="tab-content">
     <div class="tabs__tab active" id="Repositories" data-tab-info>
-        <p>Welcome to GeeksforGeek.</p>
+        <p>View repositories here.</p>
     </div>
-    <div class="tabs__tab" id="Codeup's dev team" data-tab-info>
-<table>
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <td><img src="img/kent.jpg" width="25" height="25"> </td>
-        <td>Kent Beck</td>
-        <td>Member</td>
-        <td>1 team</td>
-    </tr>
-    <tr>
-        <td><img src="img/staff.jpg" width="25" height="25"> </td>
-        <td>Codeup Instruction Staff</td>
-        <td>Member</td>
-        <td>1 team</td>
-    </tr>
-    <tr>
-       <td><img src="img/martin.jpg" width="25" height="25"> </td>
-        <td>Martin Fowler</td>
-        <td>Member</td>
-        <td>0 teams</td>
-    </tr>
-</table>
+    <div class="tabs__tab" id="People" data-tab-info>
+      <p>
+        <table style="width:100%">
+            <tr>
+                <h2>Codeup's dev team</h2>
+            </tr>
+            <tr>
+                <td><img src="img/kent.jpg" width="60" height="60"> </td>
+                <td>Kent Beck</td>
+                <td>Member</td>
+                <td>1 team</td>
+            </tr>
+            <tr>
+                <td><img src="img/staff.jpg" width="60" height="60"> </td>
+                <td>Codeup Instruction Staff</td>
+                <td>Member</td>
+                <td>1 team</td>
+            </tr>
+            <tr>
+                <td><img src="img/martin.jpg" width="60" height="60"> </td>
+                <td>Martin Fowler</td>
+                <td>Member</td>
+                <td>0 teams</td>
+            </tr>
+        </table>
+        </p>
     </div>
     <div class="tabs__tab" id="Teams" data-tab-info>
         <p>Learn about the teams</p>
@@ -154,4 +82,5 @@
 
 
 </body>
+<footer>&copy; 2018 GitHub.Inc.    <a href="url">Terms </a>    <a href="url">Privacy </a>    <a href="url">Security </a>    <a href="url">Status </a>    <a href="url"> Help </a>   </footer>
 </html>
