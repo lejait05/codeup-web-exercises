@@ -25,12 +25,11 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    var sayHello = function() {
-        console.log( "Hello from " + person.firstName + person.lastName);
+    var sayHello = function () {
+        console.log("Hello from " + person.firstName + person.lastName);
     };
 
-sayHello();
-
+    sayHello();
 
 
     /** TODO:
@@ -47,13 +46,21 @@ sayHello();
      * and console.log the relevant messages for each person
      */
 
-     var shoppers = [
-         {name: 'Cameron', amount: 180},
-         {name: 'Ryan', amount: 250},
-         {name: 'George', amount: 320}
-     ];
-     if amount >= 200
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    shoppers.forEach(function (shopper) {
+        if (amount >= 200) {
+            return (amount * .12 / 100);
+        } else
+            return (amount);
+        console.log(shopper);
+    });
 
+
+}
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -103,4 +110,4 @@ sayHello();
      *   `showBookInfo` function.
      */
 
-})();
+//})();
