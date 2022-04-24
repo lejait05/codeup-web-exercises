@@ -33,7 +33,9 @@
     // * array.
     // */
     var names = [ 'alpha', 'bravo', 'charlie', 'delta'];
-
+    for (var i = 0; i < names.length; i++) {
+        console.log('The name at index ' + i + ' is: ' + names [i]);
+    }
 
 
 
@@ -42,7 +44,9 @@
     // * Refactor your above code to use a `forEach` loop
     // */
     var names = [ 'alpha', 'bravo', 'charlie', 'delta'];
-
+    names.forEach(function(name){
+        console.log( 'Here is an awesome name: ' + name + '.');
+    });
     ///**
     // * TODO:
     // * Create the following three functions, each will accept an array and
