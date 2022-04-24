@@ -2,31 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/codeupsheet.css">
+    <div class="topnav">.<img src="img/github.jpg" width="50" height="50"> <a href="url">Pull requests</a> <a href="url">Issues</a> <a href="url">Marketplace</a> <a href="url">Explore</a>
+    </div>
     <title>Codeup</title>
 </head>
 <body>
-<h2>Codeup's dev team</h2>
+<h1><img src="img/CodeupFullColorChevronYT.jpg"  width="50" height="50">   Codeup</h1>
+<h2><div id="Repositories" class="tabcontent">
+    <h5>Repositories</h5>
+    <p>different repositories will be here.</p>
+</div>
+
+    <div id="People" class="tabcontent">
+        <h5>People</h5>
+        <p>Codeup's Dev team</p>
+    </div>
+
+    <div id="Teams" class="tabcontent">
+        <h5>Teams</h5>
+        <p>everyones teams will be here</p>
+    </div>
+
+    <div id="Projects" class="tabcontent">
+        <h5>Projects</h5>
+        <p>projects in the works and completed will be here.</p>
+    </div>
+
+    <div id="settings" class="tabcontent">
+        <h5>Settings</h5>
+        <p>settings to adjust the page will be here.</p>
+    </div>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background: rgb(140, 214, 30);
+        }
+
+        [data-tab-info] {
+            display: none;
+        }
+
+        .active[data-tab-info] {
+            display: block;
+        }
+
+        .tab-content {
+            font-size: 30px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: rgb(82, 75, 75);
+        }
+
+        .tabs {
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            display: flex;
+            margin: 0;
+        }
+
+        .tabs span {
+            background: rgb(28, 145, 38);
+            padding: 10px;
+            border: 1px solid rgb(255, 255, 255);
+        }
+
+        .tabs span:hover {
+            background: rgb(29, 185, 112);
+            cursor: pointer;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+<div class="tabs">
+    <span data-tab-value="#Repositories">Repositories</span>
+    <span data-tab-value="#People">People</span>
+    <span data-tab-value="#Teams">Teams</span>
+    <span data-tab-value="#Projects">Projects</span>
+    <span data-tab-value="#Settings">Settings</span>
+</div>
+
+<div class="tab-content">
+    <div class="tabs__tab active" id="Repositories" data-tab-info>
+        <p>Welcome to GeeksforGeek.</p>
+    </div>
+    <div class="tabs__tab" id="Codeup's dev team" data-tab-info>
 <table>
     <tr>
-        <th>Plan</th>
-        <th>Price</th>
-        <th>Features</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
     </tr>
     <tr>
-        <td>Starter</td>
-        <td>$99</td>
-        <td>Base Technology</td>
-    </tr>
-    <tr>
+        <td><img src="img/kent.jpg" width="25" height="25"> </td>
         <td>Kent Beck</td>
         <td>Member</td>
         <td>1 team</td>
     </tr>
     <tr>
-        <td>Premium</td>
-        <td>$499</td>
-        <td>Unlimited Support</td>
+        <td><img src="img/staff.jpg" width="25" height="25"> </td>
+        <td>Codeup Instruction Staff</td>
+        <td>Member</td>
+        <td>1 team</td>
+    </tr>
+    <tr>
+       <td><img src="img/martin.jpg" width="25" height="25"> </td>
+        <td>Martin Fowler</td>
+        <td>Member</td>
+        <td>0 teams</td>
     </tr>
 </table>
+    </div>
+    <div class="tabs__tab" id="Teams" data-tab-info>
+        <p>Learn about the teams</p>
+    </div>
+    <div class="tabs__tab" id="Projects" data-tab-info>
+        <p>Learn about the projects submitted</p>
+    </div>
+    <div class="tabs__tab" id="Settings" data-tab-info>
+        <p>Adjust page settings</p>
+    </div>
+</div>
+<script type="text/javascript">
+    const tabs = document.querySelectorAll('[data-tab-value]')
+    const tabInfos = document.querySelectorAll('[data-tab-info]')
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = document
+                .querySelector(tab.dataset.tabValue);
+
+            tabInfos.forEach(tabInfo => {
+                tabInfo.classList.remove('active')
+            })
+            target.classList.add('active');
+        })
+    })
+</script>
+</body>
+
+</html>
+
+
 </body>
 </html>
