@@ -57,11 +57,11 @@ fieldset {
     padding-bottom: 4px;/* There must be 4px on top of the text and below the text of an input with this class */
     margin-top:.5em;
     margin-bottom:.5em;/* It should have a separation of .5em from elements on top of it and below it */
-    calc(.btn/2);
+
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width: 100%;
+    width:calc(100% - 8px);
 }
 
 
