@@ -21,7 +21,6 @@ header {
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
-
 }
 a {
     color: var(--link-color);
@@ -33,12 +32,14 @@ a {
     display: inline-block;
     position: fixed;
     z-index: auto;
-
 }
 .nav {
     list-style-type: none;
     padding: 1.5em;
     margin: 0;
+    display: inline-block;
+}
+.nav-item{
     display: inline-block;
 }
 .nav-link {
@@ -56,7 +57,67 @@ a {
 .profile {
     background: var(--light-bg);
     height: 80px;
-    line-height: normal;
+}
+.profile-image{
+    top: 250px;
+    position: absolute;
+}
+.img-circle {
+    border-radius: 100%;
+    border: 4px solid var(--light-bg);
+}
+.profile-form{
+    float: right;
+    line-height:80px;
+}
+.btn-large {
+    font-size: 1.3em;
+    padding: 10px;
+    position: center;
+}
+.container{
+    margin: 2em;
+}
+.profile-details{
+    margin-left: .5em;
+    margin-right: .5em;
+    float: left;
+    width: calc(25% - 2em);
+}
+.text-muted {
+    color: var(--main-link-color);
+}
+.profile-items{
+    list-style-type: none;
+    padding: 0;
+}
+.timeline{
+    margin-left: .5em;
+    margin-right: .5em;
+    float: left;
+   width:calc(50% - 2em);
+}
+.media{
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px var(--separator-color);
+    padding: .5em;
+    overflow: auto;
+}
+.media-image{
+    max-width: 50px;
+    float:left;
+    margin-top: 1.33em;
+}
+.media-body{
+    float: inside;
+    width: calc(100% - 50px);
+}
+.who-to-follow{
+    margin-left: .5em;
+    margin-right: .5em;
+    float: right;
+    width: calc(25% - 2em);
 }
 .btn {
     border: 1px solid var(--main-link-color);
@@ -66,68 +127,17 @@ a {
     padding: 8px;
     border-radius: 5px;
 }
-.btn-large {
-    font-size: 1.3em;
-    padding: 10px;
-
-}
-.img-circle {
-    border-radius: 100%;
-    border: 4px solid var(--light-bg);
-    position: absolute;
-    top: auto;
-}
 .text-right {
     text-align: right;
 }
-.text-muted {
-    color: var(--main-link-color);
-}
-.profile-form{
-    float: right;
-    line-height:normal;
-}
-.profile-image{
-    position: absolute;
-
-}
-.profile-details{
-    margin-left: .5em;
-    margin-right: .5em;
-    float: left;
-   width: calc(25%- 8em);
-}
-.timeline{
-    margin-left: .5em;
-    margin-right: .5em;
-    float: left;
-    width:calc(50%- 8em);
-}
-.who-to-follow{
-    margin-left: .5em;
-    margin-right: .5em;
-    float: right;
-    width: calc(25%- 8em);
-}
-.container{
- margin: 2em;
+.profile-entry{
+    margin: .5em;
 }
 
-.media{
-    width: 100%;
-    background-color: var(--light-bg);
-    border-bottom: 1px var(--separator-color);
-    padding: .5em;
-    overflow: auto;
-}.media-image{
-     max-width: 50px;
-     float:left;
-     margin-top: 1.33em;
- }
-.media-body{
-    float: inside;
-    width: calc( 100%- 50px);
-}
-.profile-items{
-    list-style-type: none;
-}
+
+
+
+
+
+
+
