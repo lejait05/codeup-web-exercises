@@ -100,9 +100,10 @@ a {
 .media{
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom: 1px var(--separator-color);
+    border-bottom: 5px var(--separator-color)black ;
     padding: .5em;
     overflow: auto;
+    margin-bottom: 2px;
 }
 .media-image{
     max-width: 50px;
@@ -112,6 +113,9 @@ a {
 .media-body{
     float: inside;
     width: calc(100% - 50px);
+}
+.media-body p{
+    margin-left: 50px;
 }
 .who-to-follow{
     margin-left: .5em;
