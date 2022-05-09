@@ -10,14 +10,15 @@
 
 
 <h1 id="main-header">Hello World!<button id="btn1">mainHeader</button></h1>
-<ul><button id="btn3">color</button>
+<button id="btn3">color</button>
+<ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
     <li data-dbid="3">Item 3</li>
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
-<h2 id="sub-header">Hello Again<button id="btn2">subHeader</button></h2>
+<h2 id="sub-header">Hello Again.<button id="btn2">subHeader</button></h2>
 <p class="sub-paragraph"><button id="btn4">subParagraph</button>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -50,8 +51,8 @@
 
         // TODO: Set the text color of subHeader to blue
         var btn2 = document.getElementById('btn2');
-        var subHeader = document.getElementById('sub-header');
         btn2.addEventListener('click', function (event){
+            var subHeader = document.getElementById('sub-header');
             subHeader.style.color = "blue";
         });
 
