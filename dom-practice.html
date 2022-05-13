@@ -4,12 +4,38 @@
     <meta charset="UTF-8">
     <title>DOM Practice</title>
 </head>
-<body id="main-content">
+<body>
 <div>
-    <label for="background-color">Color</label>
-    <input type="text" id="background-color" name="background-color">
+    <label for="color">Color</label>
+    <input type="text" id="color" name="background-color">
     <button id="changeColor">Change Background Color</button>
 </div>
-<script src="dom-practice.js"></script>
+<!--<script src="dom-practice.js"></script>-->
 </body>
 </html>
+<script>
+    var button = document.getElementById("changeColor");
+    var color = document.querySelector("#color");
+    var body = document.querySelector("body");
+    function changeColor(e){
+        body.style.backgroundColor =color.value
+    }
+    'use strict'
+</script>
+<p id="doubleSize">jjfbjfgsdnvlkdnsgisvnlknxv</p>
+document.getElementById("doubleSize").addEventListener("dblclick", function(){
+var doubleSize= };
+
+var btn2 = document.getElementById('btn2');
+btn2.addEventListener('click', function (event){
+var subHeader = document.getElementById('sub-header');
+subHeader.style.color = "blue";
+});
+var btn1 = document.getElementById('btn1');
+btn1.addEventListener('click', function (event){
+var mainHeader = document.getElementById('main-header');
+mainHeader.innerHTML = "JavaScript is Cool"
+});
+document.getElementById("changeColor").addEventListener("click", function() {
+var pickedColor = document.getElementById("background-color").value;
+document.getElementById("main-content").style.color = pickedColor;
