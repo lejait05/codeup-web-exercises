@@ -60,7 +60,6 @@
     });
 
 
-}
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -73,7 +72,29 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
+var books =[
+        {
+            title: 'The Salmon of Doubt',
+            author: {
+                firstName: 'Douglas',
+                lastName: 'Adams'
+            }
+        },
+        {
+            title: 'Walkaway',
+            author: {
+                firstName: 'Cory',
+                lastName: 'Doctrow'
+            }
+        },
+        {
+            title: 'A Brief History of Time',
+            author: {
+                firstName: 'Stephen',
+                lastName: 'Hawking'
+            }
+        }
+    ];
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -98,7 +119,12 @@
      *      ---
      *      ...
      */
-
+for(var i = 0; i < books.length; i += 1){
+    console.log('Book # ' + (i + 1));
+    console.log('Title: ' + books[i].title);
+    console.log('Author: ' + books[i].author.firstName + ' ' + books[i].author.lastName);
+    console.log('---');
+}
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -110,4 +136,4 @@
      *   `showBookInfo` function.
      */
 
-//})();
+})();

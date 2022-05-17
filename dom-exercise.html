@@ -88,14 +88,48 @@
 
     // 1. Create a button with the id of addTodo. Create an input of type text with the id of "todo"
 
+    var todobutton = document.getElementById('addTodo');
+    var todoInput = document.getElementById('todo');
+    var todoList = document.querySelector('#todosList');
 
+
+    todobutton.addEventListener('click', function () {
+        todoList.innerHTML += '<li>' + todoInput.value + '</li>';
+        todoInput.value = "";
+    });
 
 
 
     // 2. Create an unordered list with the id="todosList"
 
 
+    function intervalFunction() {
+        var h1 = document.getElementsByTagName("hi");
+        for (var i = 0; i < h1.length; i++) {
+            var currentSize = h1[i].style.fonSize;
+            if (currentSize === "10px") {
+                h1[i].style.fontSize = "20px";
+            } else {
+                h1[i].style.fontSize = "10px";
+            }
+        }
+    }
 
+    var interval;
+    var toggleH1s = document.querySelector("#toggleH1");
+    var isOn = false;
+
+
+    toggleH1s.addEventListener("click", function () {
+        isOn = !isOn;
+
+        if (isOn) {
+            interval = setInterval(intervalFunction, 1000);
+        } else {
+            clearInterval(interval);
+        }
+
+    });
 
 
     // 4. When the add button is clicked:

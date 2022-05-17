@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
 
     <title>Konami Code</title>
@@ -8,6 +7,8 @@
 <body>
 <h1>Konami Code</h1>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+
+</script>
 <!--<script src="/js/jquery.js"></script>-->
 <script>
     "use strict";
@@ -19,27 +20,40 @@
     // }
     $(document).keyup(function(event){
         console.log(event.keyCode);
+        if (event.keyCode === 38,38,40,40,37,39,37,39,66,65){
+            alert("up arrow hit!!!");
+        }
     });
+    // The Konami Code: Up, Up, Down, Down, Left, Right, Left, Right, B, A ( ↑ ↑ ↓ ↓ ← → ← → B A )
+
+
 </script>
 
 <script>
-    var xTriggered = 0;
-    $( "#target" ).keyup(function( event ) {
-        xTriggered++;
-        var msg = "Handler for .keyup() called " + xTriggered + " time(s).";
-        $.print( msg, "html" );
-        $.print( event );
-    }).keydown(function( event ) {
-        if ( event.which == 13 ) {
-            event.preventDefault();
-        }
-    });
-
-    $( "#other").click(function() {
-        $( "#target" ).keyup();
-    });
+    // var xTriggered = "";
+    // $( "#target" ).keyup(function( event ) {
+    //     xTriggered++;
+    //     var msg = "Handler for .keyup() called " + xTriggered + " time(s).";
+    //     $.print( msg, "html" );
+    //     $.print( event );
+    // }).keydown(function( event ) {
+    //     if ( event.which == 13 ) {
+    //         event.preventDefault();
+    //     }
+    // });
+    //
+    // $( "#other").click(function() {
+    //     $( "#target" ).keyup();
+    // });
 </script>
 
 
 </body>
 </html>
+
+
+<!--all numbers for k code before java code know  key code-->
+<!--put all numbers in string-->
+<!--define global var to hold user input and when typed it concats to user input.-->
+<!--use chase logic at line 37 to create conditional to be true when user input inc k code-->
+

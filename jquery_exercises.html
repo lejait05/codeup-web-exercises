@@ -9,7 +9,7 @@
 <!--<script src="js/custom-js.js"></script>-->
 
 <a href="#" id="pageLink">Link to nowhere</a>
-
+<h1>Howdy Party People</h1>
 <ul id="list">
     <li class="codeup">Item 1</li>
     <li class="codeup">Item 2</li>
@@ -18,13 +18,27 @@
     <li class="list-item">Item 5</li>
 </ul>
 <div id="onetime"> erghdkghdgfhf</div>
+<p class="latin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, consectetur ex fugiat nemo nesciunt voluptatem!</p>
 <div id="app">sdjbjksdvdsdksjjknvnv</div>
 </main>
 <script>
-    $('.codeup').css("border", "1px solid red");
-    $('li').css("font-size", "20px");
+    // $('.codeup').css("border", "1px solid red");
+    // $('li').css("font-size", "20px");
 
+$("h1").on("click",function (){
 
+    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    $(this).css("background-color", "#" + randomColor);
+});
+$('p').dblclick(function (){
+    $("p").css("font-size", "26px")
+});
+$("li").hover(function () {
+    $(this).css("color", "lime")
+},
+    function (){
+$(this).css("color", "blue")
+});
 </script>
 </body>
 </html>
