@@ -33,9 +33,9 @@ $.get ("data/inventory.json").done(function (data){
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
     // data.forEach(function (tool){
-    //     var title = '';
-    //     tool.title ? title = tool.title : title = "Untitled";
-    //     $("#insertProducts").append('<tr><td>' + title + '</td><td>' + tool.quantity + '</td>' + '<td>' + tool.price + '</td>' + '<td>' + tool.categories + '</td></tr>')
+        var title = '';
+        tool.title ? title = tool.title : title = "Untitled";
+        $("#insertProducts").append('<tr><td>' + title + '</td><td>' + tool.quantity + '</td>' + '<td>' + tool.price + '</td>' + '<td>' + tool.categories + '</td></tr>')
     // })
 })();
 </script>

@@ -37,3 +37,36 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+<script>
+    $("#murals-info").click(function(){
+        $.ajax("/data/murals.json").done(function(data){
+            data.forEach(function(mural, index){
+                var title = '';
+                mural.artwork_title ? title = mural.artwork_title : title = "Untitled";
+                $("#card-section").append(
+                    '<article class="card">' +
+                    '<p>' + title + '</p>' +
+                    '<p>' + mural.artist_credit + '</p>' +
+                    '<button class="more-info">More Information</button>' +
+                    '<p class="index" style="display: none">'+ index  + '</p>' +
+                    '</article>');
+            });
+        });
+        $("#card-section").on('click', '.more-info', function(){
+            alert('yo');
+        });
+    });
+</script>
+$("#card-section").on('click', '.more-info', function(){
+let theClickedButton = $(this);
+let index = theClickedButton.next().text();
+$.ajax("/data/murals.json").done(function(data){
+var year = data[index].year_installed;
+$(theClickedButton).after('<p>' + year + '</p>');
+});
+});
