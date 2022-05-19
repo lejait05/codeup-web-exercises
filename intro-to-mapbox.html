@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>intro to mapbox</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <style>
+            #map{
+            width: 400px;
+            height: 300px;
+            }
+            </style>
+</head>
+<body>
+
+
+<div id='map'></div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibGVqYWl0MDUiLCJhIjoiY2wzZDV6bnR3MDU4ZzNkcDYzMTh5N2psdSJ9.ZrhAxrs9e93JrIl2ji-QXQ';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+        // map.center(7)
+        // map.setZoom([-97.04028155784476, 32.899800072771455])
+    });
+</script>
+let codeupMarker = new mapboxgl.Marker()
+.setLngLat([-98.48962, 29.42692])
+.addTo(map);
+
+let codeupPopup = new mapboxgl.Popup().setHTML('<p class = "mt-2" style="width: 250px;">Codeup</p>');
+codeupMarker.setPopup(codeupPopup);
+</body>
+</html>
