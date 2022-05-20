@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Map Marker Example</title>
-    <!-- Mapbox CSS -->
+    <script src="js/keys.js"></script>
+    <!-- Mapbox CSS --><link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <!-- Custom CSS --><link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <style>
         #map {
             /* the width and height may be set to any size */
-            width: 100%;
+            width: 400px;
             height: 700px;
         }
     </style>
@@ -30,7 +31,7 @@
 <!-- Custom JS -->
 <script>
 
-    var accessToken = YOUR_ACCESS_TOKEN_HERE;
+    var accessToken = MAPBOX_API_TOKEN ;
 
     mapboxgl.accessToken = accessToken;
 
