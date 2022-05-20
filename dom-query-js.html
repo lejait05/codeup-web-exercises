@@ -28,10 +28,16 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-
+<div id="header-div"></div>
+<button id="insert-head">but</button>
 <script>
     (function() {
         "use strict";
+
+        var headerDiv = document.getElementById("header-div");
+        document.getElementById("insert-head").addEventListener("click, function() {
+           headerDiv.innerText = <h1>Howdy</h1> });
+});
         // TODO: Uncomment next line and get the main header element by id
 
         var mainHeader = document.getElementById('main-header');
@@ -85,8 +91,7 @@
         var btn4 = document.getElementById('btn4');
         btn4.addEventListener('click', function (event) {
             subParagraphs[0].innerText = "Mission Accomplished!";
-        })
-    })();
+        } ) ;
 </script>
 </body>
 </html>

@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        #map{
+            width: 400px;
+            height: 300px;
+        }
+    </style>
 </head>
+
 <body>
+<div id="current-weather"></div>
+<div id="forcast"></div>
+<div id='map' class="mx-auto mt-4"></div>
+<form class="mx-auto w-25 mt-2">
+    <label for="zoom">Set zoom:</label>
+    <input class="my-2" type="text" name="zoom" id="zoom">
+    <button id="zoomSubmit">Submit</button>
+</form>
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="js/keys.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script src="js/weather-map.js"></script>
+
+
+
+<script>
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
+        center: [-98.48962, 29.42692], // starting position [lng, lat]
+        zoom: 15 // starting zoom
+    });
+</script>
 
 </body>
 </html>
