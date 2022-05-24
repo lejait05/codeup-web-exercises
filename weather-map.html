@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Weather Map</title>
@@ -8,27 +8,52 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <style>
         #map{
-            width: 400px;
-            height: 300px;
+            width: 75%;
+            height: 400px;
         }
+
+
+
     </style>
 </head>
 
 <body>
-<div id="current-weather"></div>
-<div id="forcast"></div>
-<div id='map' class="mx-auto mt-4"></div>
+<div class="container m-2">
+<div class="container bg-primary text-white d-flex justify-content-between">
+    <p>Weather App </p>
+
+    <p>Current City :  </p>
+</div>
+
+
 <form class="mx-auto w-25 mt-2">
-    <label for="zoom">Set zoom:</label>
-    <input class="my-2" type="text" name="zoom" id="zoom">
-    <button id="zoomSubmit">Submit</button>
+    <label for="setMarker">Enter Location</label>
+    <input type="text" name="setMarker" id="setMarker" class="my-2">
+    <button id="setMarkerButton">Submit</button>
 </form>
-<script src="node_modules/jquery/dist/jquery.js"></script>
+<h1>Current Weather</h1>
+<div class="card row container-fluid w-25"   id="current-weather"></div>
+
+
+<h1> 5 Day Forcast</h1>
+<div class="card row container-fluid " id="forcast" ></div>
+
+<div id='map' class="mx-auto mt-4 border-3"></div>
+<!--<form class="mx-auto w-25 mt-2">-->
+<!--    <label for="zoom">Set zoom:</label>-->
+<!--    <input class="my-2" type="text" name="zoom" id="zoom">-->
+<!--    <button id="zoomSubmit">Submit</button>-->
+<!--</form>-->
+
+
 <script src="js/keys.js"></script>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
 <script src="js/weather-map.js"></script>
-
-
+<script src="js/mapbox-goecoder-utils.js"></script>
 
 <script>
     mapboxgl.accessToken = MAPBOX_API_TOKEN;
@@ -38,7 +63,22 @@
         center: [-98.48962, 29.42692], // starting position [lng, lat]
         zoom: 15 // starting zoom
     });
-</script>
+    document.getElementById("setMarkerButton").addEventListener('click', function(e){
+        e.preventDefault();
+        let address = document.getElementById("setMarker").value;
+        console.log(address);
+        geocode(address, MAPBOX_API_TOKEN).then(function(coordinates) {
+            console.log(coordinates);
+            let userMarker = new mapboxgl.Marker()
+                .setLngLat(coordinates)
+                .addTo(map);
+        });
 
+
+    });
+
+
+</script>
+</div>
 </body>
 </html>
