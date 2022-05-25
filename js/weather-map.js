@@ -23,7 +23,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
         if (index < 5) {
             console.log(new Date(dailyForcast.dt * 1000));
             console.log(dailyForcast)
-            $("#forcast").append("<div class='card row-cols-5 m-2'>")
+            $("#forcast").append("<div class='card border-dark mb-3'  >")
             $("#forcast").append("<p>" + new Date(dailyForcast.dt * 1000) + "</p>")
             $("#forcast").append("<p>" + " High" + "  " + dailyForcast.temp.max + "   " + "Low" + "   " +  dailyForcast.temp.min + "</p>")
             $("#forcast").append("<p>" + dailyForcast.weather[0].description + "</p>")
