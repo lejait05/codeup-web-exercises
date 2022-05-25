@@ -35,3 +35,16 @@ const users = [
         yearsOfExperience: 9
     }
 ];
+let languageFilter = users.filter(users =>users.languages < 3);
+console.log("filtered", languageFilter)
+
+
+let addy = users.map((value) => `<li>${value.email}</li>`)
+console.log(addy);
+
+
+let totalYrs = users.reduce(())
+
+
+
+// let longestEmail =
