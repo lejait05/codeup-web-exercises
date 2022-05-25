@@ -229,7 +229,7 @@ console.log(message);
 
 // Even better ES6 approach
 
-// let addArgsC = (num1 = 2, num2 = 2) => num1 + num2;
+let addArgsC = (num1 = 2, num2 = 2) => num1 + num2;
 
 // Test output
 
@@ -243,20 +243,20 @@ console.log(message);
 // console.log(addArgsB(1));
 // console.log(addArgsB(3, 3));
 //
-// console.log("\nC output...");
-// console.log(addArgsC());
-// console.log(addArgsC(1));
-// console.log(addArgsC(3, 3));
+console.log("\nC output...");
+console.log(addArgsC());
+console.log(addArgsC(1));
+console.log(addArgsC(3, 3));
 
 
 // ============== Object Assignment Shorthand
 
 // variables to build object from...
 
-// let breed = "Pug";
-// let age = 3;
-// let name = "Lexie";
-// let isCute = true;
+let breed = "Pug";
+let age = 3;
+let name = "Lexie";
+let isCute = true;
 
 // ES5 way...
 
@@ -271,14 +271,14 @@ console.log(message);
 
 // ES6 way...
 
-// const dog = {
-//     breed,
-//     age,
-//     name,
-//     isCute
-// };
-// //
-// console.log(dog.name);
+const dog = {
+    breed,
+    age,
+    name,
+    isCute
+};
+//
+console.log(dog.name);
 
 
 // ============== Object / Array Destructuring

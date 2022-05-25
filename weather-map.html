@@ -12,9 +12,9 @@
             height: 400px;
         }
 .card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-evenly;*/
     margin: 2px;
 }
 
@@ -41,7 +41,10 @@
 
 
 <h1> 5 Day Forcast</h1>
-<div class="card border-dark mb-3 " id="forcast" ></div>
+<div class="container d-flex row-cols-5" >
+        <div class= "card "  id="forcast"></div>
+</div>
+
 
 <div id='map' class="mx-auto mt-4 border-3"></div>
 <!--<form class="mx-auto w-25 mt-2">-->
