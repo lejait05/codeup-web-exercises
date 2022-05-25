@@ -100,7 +100,7 @@ let list = '<ul>';
 //
 // }
 
-console.log()
+// console.log()
   // TODO: rewrite the assignment below to use template strings
 // list += '<li>' + developer + '</li>';
 // });
