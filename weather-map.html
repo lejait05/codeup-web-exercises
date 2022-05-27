@@ -11,12 +11,12 @@
             width: 75%;
             height: 400px;
         }
-/*.card{*/
-/*    !*display: flex;*!*/
+.card{
+    display: flex;
 /*    !*flex-direction: row;*!*/
 /*    !*justify-content: space-evenly;*!*/
 /*    margin: 2px;*/
-/*    border: var(--bs-card-border-width) solid rgb(0 0 0 / 91%);*/
+    border: var(--bs-card-border-width) solid rgb(0 0 0 / 91%);
 /*    !*padding: 3px;*!*/
 /*    !*flex-direction: column;*!*/
 /*}*/
@@ -41,40 +41,41 @@
 
  <div class="container">
     <h1>Current Weather</h1>
-<div  class="card w-25 " style="width: 18rem;">
-    <div class="card-body" id="current-weather">
-        <ul class="list-group list-group-flush" >
-            <li class="list-group-item" id="current"></li>
-            <li class="list-group-item" id="feel"></li>
-            <li class="list-group-item" id="iconCur"></li>
-        </ul>
-</div>
+     <div class="card w-25"id="current-weather"></div>
+<!--<div  class="card w-25 " style="width: 18rem;">-->
+<!--    <div class="card-body" id="current-weather">-->
+<!--        <ul class="list-group list-group-flush" >-->
+<!--            <li class="list-group-item" id="current"></li>-->
+<!--            <li class="list-group-item" id="feel"></li>-->
+<!--            <li class="list-group-item" id="iconCur"></li>-->
+<!--        </ul>-->
+<!--</div>-->
 
  </div>
 
     <div class="container">
 <h1> 5 Day Forecast</h1>
         <div class="row">
-<!--        <div class="card-d">row-->
-<!--            <div class="column" id="forcast">col-->
-<!--&lt;!&ndash;                <div class="card" >card</div>&ndash;&gt;-->
-<!--            </div>-->
-<!--        </div>-->
-        <div class="card col-sm" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title" id="date"></h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush" id="forcast">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-            </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+<!--        <div class="card w-25" id="forcast">row-->
+            <div class="column" >
+<!--                <div class="card" >card</div>-->
             </div>
         </div>
+<!--        <div class="card col-sm" style="width: 18rem;">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title" id="date"></h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--            </div>-->
+<!--            <ul class="list-group list-group-flush" id="forcast">-->
+<!--                <li class="list-group-item">An item</li>-->
+<!--                <li class="list-group-item">A second item</li>-->
+<!--                <li class="list-group-item">A third item</li>-->
+<!--            </ul>-->
+<!--            <div class="card-body">-->
+<!--                <a href="#" class="card-link">Card link</a>-->
+<!--                <a href="#" class="card-link">Another link</a>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="card col-sm" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title" id="date2"></h5>
@@ -90,53 +91,53 @@
                 <a href="#" class="card-link">Another link</a>
             </div>
         </div>
-        <div class="card col-sm" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title" id="date3"></h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush" id="temp">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-            </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div>
-        </div>
-        <div class="card col-sm" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title" id="date4"></h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush" id="temp">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-            </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div>
-        </div>
-        <div class="card col-sm" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title" id="date5"></h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush" id="temp">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-            </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div>
-        </div>
-        </div>
-    </div>
+<!--        <div class="card col-sm" style="width: 18rem;">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title" id="date3"></h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--            </div>-->
+<!--            <ul class="list-group list-group-flush" id="temp">-->
+<!--                <li class="list-group-item">An item</li>-->
+<!--                <li class="list-group-item">A second item</li>-->
+<!--                <li class="list-group-item">A third item</li>-->
+<!--            </ul>-->
+<!--            <div class="card-body">-->
+<!--                <a href="#" class="card-link">Card link</a>-->
+<!--                <a href="#" class="card-link">Another link</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card col-sm" style="width: 18rem;">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title" id="date4"></h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--            </div>-->
+<!--            <ul class="list-group list-group-flush" id="temp">-->
+<!--                <li class="list-group-item">An item</li>-->
+<!--                <li class="list-group-item">A second item</li>-->
+<!--                <li class="list-group-item">A third item</li>-->
+<!--            </ul>-->
+<!--            <div class="card-body">-->
+<!--                <a href="#" class="card-link">Card link</a>-->
+<!--                <a href="#" class="card-link">Another link</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card col-sm" style="width: 18rem;">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title" id="date5"></h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--            </div>-->
+<!--            <ul class="list-group list-group-flush" id="temp">-->
+<!--                <li class="list-group-item">An item</li>-->
+<!--                <li class="list-group-item">A second item</li>-->
+<!--                <li class="list-group-item">A third item</li>-->
+<!--            </ul>-->
+<!--            <div class="card-body">-->
+<!--                <a href="#" class="card-link">Card link</a>-->
+<!--                <a href="#" class="card-link">Another link</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
 <!--    <div class="card" style="width: 18rem;" >-->
 <!--        <img src="..." class="card-img-top" alt="...">-->
