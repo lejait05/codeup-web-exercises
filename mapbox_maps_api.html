@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Map Marker Example</title>
+    <title>Mapbox Maps</title>
     <script src="js/keys.js"></script>
-    <!-- Mapbox CSS --><link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
     <!-- Custom CSS --><link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <style>
         #map {
@@ -17,50 +16,65 @@
 </head>
 <body>
 
-<h1>My First Mapbox Map!</h1>
+<h1>My Favorite Restaurant!</h1>
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
+<form class="mx-auto w-25 mt-2">
+    <label for="zoom">Set zoom:</label>
+    <input class="my-2" type="text" name="zoom" id="zoom">
+    <button id="zoomSubmit">Submit</button>
+</form>
 
+
+<form class="mx-auto w-25 mt-2">
+    <label for="setMarker">Enter an address</label>
+    <input type="text" name="setMarker" id="setMarker" class="my-2">
+    <button id="setMarkerButton">Submit</button>
+</form>
 <!-- Mapbox JS -->
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
 <!-- Mapbox Geocoder Util Methods -->
 <script src="js/mapbox-goecoder-utils.js"></script>
 
 <!-- Custom JS -->
+
 <script>
 
-    var accessToken = MAPBOX_API_TOKEN ;
 
-    mapboxgl.accessToken = accessToken;
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
 
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
-        center: [-98.4916, 29.4252]
+        style: 'mapbox://styles/mapbox/outdoors-v11',
+        zoom: 15,
+        center: [-98.66988, 29.55383]
+    });
+let sushiMarker = new mapboxgl.Marker()
+    .setLngLat([-98.66988, 29.55383])
+    .addTo(map);
+let sushiPopup = new mapboxgl.Popup().setHTML('<p class = "mt-2" style="width: 250px;">Sushi</p>');
+    sushiMarker.setPopup(sushiPopup);
+
+    $("#zoomSubmit").on('click', function(e){
+        e.preventDefault();
+        map.setZoom($("#zoom").val());
     });
 
-    var alamoInfo = {
-        address: "The Alamo",
-        popupHTML: "<p>Remember the Alamo!</p>"
-    };
-
-    function placeMarkerAndPopup(info, token, map) {
-        geocode(info.address, token).then(function(coordinates) {
-            var popup = new mapboxgl.Popup()
-                .setHTML(info.popupHTML);
-            var marker = new mapboxgl.Marker()
+    document.getElementById("setMarkerButton").addEventListener('click', function(e) {
+        e.preventDefault();
+        let address = document.getElementById("setMarker").value;
+        console.log(address);
+        geocode(address, MAPBOX_API_TOKEN).then(function (coordinates) {
+            console.log(coordinates);
+            let userMarker = new mapboxgl.Marker()
                 .setLngLat(coordinates)
-                .addTo(map)
-                .setPopup(popup);
-            popup.addTo(map);
+                .addTo(map);
         });
-    }
-
-    placeMarkerAndPopup(alamoInfo, accessToken, map);
-
+    });
 </script>
 </body>
 </html>
