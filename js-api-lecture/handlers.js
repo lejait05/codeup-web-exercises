@@ -58,7 +58,12 @@ export const handleDisplayUpdate = (event) => {
     //TODO: Get Data from user by Id
     //TODO: Map to update form
     //TODO: Add handlers
-
+fetch(baseURL + "/user/" + event.target.value,fetchSettings)
+    .then(res => res.json())
+    .then(res => {
+        modal.main.innerHTML = mapUserToUpdate(res);
+        modal.foot.innerHTML = mapButtonsForUpdate (res.id)
+    })
 };
 
 
