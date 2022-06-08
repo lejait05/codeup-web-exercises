@@ -5,6 +5,7 @@
     <style>
         .invisible {
             visibility: hidden;
+
         }
     </style>
 </head>
@@ -14,7 +15,7 @@
 <dl>
     <dt>Q: Where is Glacier National Park located?</dt>
 
-    <dd class="invisible">A:
+    <dd class="invisible" >A:
         Glacier National Park is located in northwestern Montana on the U.S./Canadian border. Access to the park from
         the east and west is along U.S. Highway 2. Park headquarters is located in West Glacier.
     </dd>
@@ -87,11 +88,10 @@
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script>
     $("#toggle-answers").click(function () {
-        $(".invisible").toggle();
+        $('dd').toggleClass('invisible');
     });
-
-
 </script>
+
 </body>
 </html>
 
